@@ -1,0 +1,98 @@
+<html>
+<head>
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<script src="wizard.js"></script>
+
+<script type="text/javascript">
+		
+$(document).ready(function(){
+	
+	// onNext variable in options defines a function that has to be called when 'Next' button is clicked
+	// onPrevious variable in options defines a function that has to be called when 'Previous' button is clicked
+	// policy defines the navigation policy that can either be flexible or sequential 
+	
+	// These params are optional and can be ignored
+	
+	var options = [
+             {onNext: function() {return true;}},
+             {policy: 'flexible'},
+             {onPrevious:function(){return true;}}
+             
+	];
+	
+	$("#parent").wizard(options);
+});
+
+</script>
+
+<link href="css/start/jquery-ui-1.8.16.custom.css" rel="stylesheet"
+	type="text/css" />
+
+<link href="wizard.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	<div id="parent" title="Simplified" style="margin: 0 auto; width: 80%; border: solid; border-radius: 10px"> 
+		<section class="wizard" id="PersonalInfo" title="Personal Info">
+			<p>
+				<label id="first_name_label_id">First Name</label> <input
+					name="First Name" id="first_name_id" type="text">
+			</p>
+			<p>
+				<label id="last_name_label_id">Last Name</label> <input
+					name="Last Name" id="last_name_id" type="text">
+			</p>
+			<p>
+				<label>First Name</label> <input name="First Name" type="text">
+			</p>
+			<p>
+				<label>Last Name</label> <input name="Last Name" type="text">
+			</p>
+			<p>
+				<label>First Name</label> <input name="First Name" type="text">
+			</p>
+			<p>
+				<label>Last Name</label> <input name="Last Name" type="text">
+			</p>
+			<p>
+				<label>First Name</label> <input name="First Name" type="text">
+			</p>
+			<p>
+				<label>Last Name</label> <input name="Last Name" type="text">
+			</p>
+			<p>
+				<label>First Name</label> <input name="First Name" type="text">
+			</p>
+			<p>
+				<label>Last Name</label> <input name="Last Name" type="text">
+			</p>
+		</section>
+		<section class="wizard" id="ProductInfo" title="Product Info">
+			<p>
+				<label id="first_prd_label_id">Product Name</label> <input
+					name="Product Name" id="first_pdt_id" type="text">
+			</p>
+			<p>
+				<label id="plan_name_label_id">Plan Name</label> <input
+					name="Plan Name" id="plan_name_id" type="text">
+			</p>
+		</section>
+		<section class="wizard" id="PaymentInfo" title="Payment Info">
+			<p>
+				<label id="first_pymt_label_id">Payment Mode</label> <input
+					name="Payment Mode" id="first_pymt_id" type="text">
+			</p>
+			<p>
+				<label id="amt_label_id">Amount</label> <input name="Amount"
+					id="amt_id" type="text">
+			</p>
+		</section>
+	</div>
+</body>
+</html>
+
